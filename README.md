@@ -21,7 +21,7 @@ freemed-react-study
 > | Chapter | Subject                                  | Note | Presenter                                |
 > | ------- | ---------------------------------------- | ---- | ---------------------------------------- |
 > | 0       | es6, es7 & JSX syntax                    |      | 아진 |
-> | 1       | props & state & lifecycle|      | [Leepilju](https://github.com/Leepilju)|
+> | 1       | [props & state & lifecycle](https://github.com/Freemd-it/React-study/tree/master/2.props-state)|      | [Leepilju](https://github.com/Leepilju)|
 > | 2       | Component 설계 및 이벤트처리 + 배열 |      | 예진|
 > | 3       | React-router, Dom 조작 |      | 수진 |
 > | 4       | Redux + immutable.js |      | 민수 |
