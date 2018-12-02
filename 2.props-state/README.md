@@ -185,6 +185,8 @@ export default App;
         - ~~UNSAFE_componentWillUpdate()~~
         - ~~UNSAFE_componentWillReceiveProps()~~
 - 자주사용하는 [lifecycle-methods-diagram](http://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/)
+- ![lifecycleImg](./react-lifecycle.jpg)
+
 
 ```
 import React, { Component, Fragment } from 'react';
