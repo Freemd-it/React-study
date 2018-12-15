@@ -6,7 +6,7 @@
 	- {} (이벤트 처리기)로 함수 이름을 전달한다.
 
 ## 이벤트 사용
-'''
+~~~
 //HTML
 <button onclick="activateLasers()">
   Activate Lasers
@@ -16,7 +16,7 @@
 <button onClick={activateLasers}>
   Activate Lasers
 </button>
-'''
+~~~
 
 리액트에서는 onClick에서 전처리기를 통해 함수명을 전달해 줍니다.
 
