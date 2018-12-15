@@ -5,6 +5,7 @@
 	- 이벤트는 camelCase를 사용한다. (onclick X -> onClink O)
 	- {} (이벤트 처리기)로 함수 이름을 전달한다.
 
+
 ## 이벤트 사용
 ~~~
 //HTML
@@ -19,6 +20,7 @@
 ~~~
 
 리액트에서는 onClick에서 전처리기를 통해 함수명을 전달해 줍니다.
+
 
 
 ## 이벤트 취소
@@ -60,6 +62,7 @@ https://codepen.io/gaearon/pen/xEmzGg?editors=0010
 
 
 
+
 ## 이벤트 핸들러에 인수 전달하기
 ~~~
 <button onClick={(e) => this.deleteRow(id, e)}>Delete Row</button>
@@ -73,7 +76,7 @@ https://codepen.io/gaearon/pen/xEmzGg?editors=0010
 
 - bind는 일반적으로 onClick={this.handleClick} 처럼 () 없이 메서드를 참조하기 위해 사용합니다.
 - bind 를 호출하는 게 귀찮은 경우 이 문제를 해결할 수 있는 두가지 방법이 있습니다. 
-	- 1. 실험 기능인 퍼블릭 클래스 필드 문법 을 사용한다면 클래스 필드를 정확히 콜백에 bind할 수 있습니다.
+	1. 실험 기능인 퍼블릭 클래스 필드 문법 을 사용한다면 클래스 필드를 정확히 콜백에 bind할 수 있습니다.
 	~~~
 	class LoggingButton extends React.Component {
 	  // This syntax ensures `this` is bound within handleClick.
@@ -91,7 +94,7 @@ https://codepen.io/gaearon/pen/xEmzGg?editors=0010
 	  }	
 	}
 	~~~
-	- 2. 콜백에서 arrow function 을 사용할 수도 있습니다.
+	2. 콜백에서 arrow function 을 사용할 수도 있습니다.
 	~~~
 		class LoggingButton extends React.Component {
 	  handleClick() {
