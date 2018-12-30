@@ -18,7 +18,7 @@
 
 예를들어, 일정관리 프로젝트 내에서 
 
-![component](/Users/gimminsu/Desktop/component.jpg)
+![component](./component.jpg)
 
 App에서 모든 상태 로직을 관리 하기 때문에,
 
@@ -30,7 +30,7 @@ App 컴포넌트에 state를 업데이트를 하면 App 컴포넌트가 리렌�
 
 
 
-![complex_component](/Users/gimminsu/Desktop/complex_component.jpg)
+![complex_component](./complex_component.jpg)
 
 컴포넌트가 적을 시에는 문제가 별로 없지만, 점차 증대 할 경우, 
 
@@ -47,7 +47,7 @@ App 컴포넌트에 state를 업데이트를 하면 App 컴포넌트가 리렌�
 
 
 
-![redux_structure](/Users/gimminsu/Desktop/redux_structure.jpg)
+![redux_structure](./redux_structure.jpg)
 
 리덕스는 상태 관리의 로직을 컴포넌트 밖에서 처리 
 
