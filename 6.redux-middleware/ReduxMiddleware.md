@@ -9,7 +9,7 @@ Redux를 제안하고 개발한 Dan Abramov는
 "클라이언트 앱의 복잡성을 증가시키는 것은 **Mutation**과 **Asyncronicity** 이 2가지이며, 그 둘은 멘토스와 콜라와 같다"
 
 라고 했는데, 여기서 Redux는 Mutation 즉, 클라이언트의 종합적인 state를 관리하기 위한 아키텍쳐 방법론이다.
-
+<br>
 
 
 #### 1) Redux의 원리
