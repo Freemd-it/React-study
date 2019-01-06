@@ -26,7 +26,7 @@ freemed-react-study
 > | 3       | React-router, Dom 조작 |      | 수진 |
 > | 4       | [Redux + immutable.js](https://github.com/Freemd-it/React-study/tree/master/5.redux-immutable) |      | 민수 |
 > | 5       | [Redux Middleware](https://github.com/Freemd-it/React-study/tree/master/6.redux-middleware) |    | 세원 |
-> | 6       |  Networking & Code Splitting |    | [DongramO](https://github.com/DongramO) |
+> | 6       | [Networking & Code Splitting](https://github.com/Freemd-it/React-study/tree/master/7.network-codeSplitting) |    | [DongramO](https://github.com/DongramO) |
 > | 7       | Server Side Rendering |      |  |
 
 
