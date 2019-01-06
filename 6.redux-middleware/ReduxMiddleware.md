@@ -85,13 +85,113 @@ Redux에서 action은 **단순객체**이기 때문에, 조건 분기 혹은 act
 
 실제 프로젝트 작업 시에는, 미들웨어를 직접 만들어 사용하기보단 이미 잘 만들어져있는 미들웨어를 가져다 쓰는 경우가 대부분이지만, 미들웨어의 이해를 위하여 로깅을 위한 간단한 Logger Middleware를 작성해보겠습니다.
 
+```bash
+$ git clone https://github.com/vlpt-playground/redux-starter-kit.git
+$ cd redux-starter-kit
+$ yarn
+```
+
+
+
+> ##### `next(action)`
+>
+> store.dispatch를 실행할 경우, 액션을 처음부터 다시 디스패치하는 것이므로 현재의 미들웨어부터 다시 실행하게 된다.
+>
+> next(action)은 이와 달리 리듀서로 넘겨주거나, 미들웨어가 더 존재한다면 다음 미들웨어로 넘겨줍니다.
+>
+> ![next(action)](next-vs-dispatch.png)
 
 
 
 
 
 
-###  2장. 비동기 작업을 처리하기 위한 미들웨어 사용해보기
 
- 
+###  [2장. 비동기 작업을 처리하기 위한 미들웨어 사용해보기](https://redux-advanced.vlpt.us/2/)
 
+####  2-1 [redux-thunk](https://github.com/reduxjs/redux-thunk)
+
+리덕스를 사용하는 어플리케이션에서 비동기 작업을 처리 할 때 가장 기본적인 방법은  `redux-thunk` 라는 미들웨어를 사용하는것입니다. ([redux 공식 매뉴얼](https://lunit.gitbook.io/redux-in-korean/api/applymiddleware#using-thunk-middleware-for-async-actions)에서도 이 미들웨어를 사용하여 비동기작업을 다룹니다.)
+
+
+
+#### thunk 란?
+
+thunk란, 특정 작업을 나중에하도록 미루기 위하여 함수 형태로 작업단위를 감싼 것을 말합니다.
+
+```javascript
+const x = 1 + 2;
+
+const foo = () => 1 + 2;
+```
+
+
+
+#### 왜 사용해야하는가?
+
+단순 객체만 생성하는 기존의 액선 생성자와 달리, 
+
+redux-thunk를 활용하면 함수를 생성하는 액션 생성자를 작성할 수 있게 됩니다.
+
+ 따라서, 아래와 같이 액션의 디스패치를 지연시키거나, 특정 조건이 만족된 경우에만 디스패치할 수 있습니다!
+
+내부 함수에서는 매개변수로 dispatch와 getState를 받습니다.
+
+```javascript
+const INCREMENT_COUNTER = 'INCREMENT_COUNTER';
+
+function increment() {
+  return {
+    type: INCREMENT_COUNTER
+  };
+}
+
+//액션의 디스패치를 1초 지연시킴
+function incrementAsync() {
+  return dispatch => {
+    setTimeout(() => {
+      // Yay! Can invoke sync or async actions with `dispatch`
+      dispatch(increment());
+    }, 1000);
+  };
+}
+```
+
+
+
+```javascript
+//(counter가 홀수)특정 조건에서만 액션을 디스패치
+function incrementIfOdd() {
+  return (dispatch, getState) => {
+    const { counter } = getState();
+
+    if (counter % 2 === 0) {
+      return;
+    }
+
+    dispatch(increment());
+  };
+}
+```
+
+
+
+
+
+#### 2-2 Redux-saga
+
+위에서 다룬 Redux-thunk는 간단하게 비동기 작업을 처리할 수 있다는 장점이 있지만 단점또한 존재한다.
+
+액션을 생성하는 함수에서 action을 디스패치하는 것 뿐만 아니라 비동기작업을 위한 코드나 api요청, 기타 로직들이 더해지면서
+
+action 본래의 역할이 더럽혀진다는 것이다.
+
+이러한 단점을 보완하기 위해 많은 사람들이 `Redux-saga` 로 넘어간다고 합니다.
+
+
+
+[왜 리덕스 사가인가?](https://gracefullight.github.io/2017/12/06/Why-redux-saga/)
+
+[Redux-saga의 흐름](http://takeuu.tistory.com/259)
+
+[벨로퍼트 - 리덕스사가](https://redux-advanced.vlpt.us/2/05.html)
