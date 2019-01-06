@@ -25,8 +25,7 @@ freemed-react-study
 > | 2       | Component 설계 및 이벤트처리 + 배열 |      | 예진|
 > | 3       | React-router, Dom 조작 |      | 수진 |
 > | 4       | [Redux + immutable.js](https://github.com/Freemd-it/React-study/tree/master/5.redux-immutable) |      | 민수 |
-> | 5       | [Redux Middleware](https://github.com/Freemd-it/React-study/tree/master/
-6.redux-middleware) |    | 세원 |
+> | 5       | [Redux Middleware](https://github.com/Freemd-it/React-study/tree/master/6.redux-middleware) |    | 세원 |
 > | 6       |  Networking & Code Splitting |    | [DongramO](https://github.com/DongramO) |
 > | 7       | Server Side Rendering |      |  |
 
