@@ -1,0 +1,15 @@
+node_modules
+logs
+
+# locks
+package-lock.json
+yarn.lock
+
+# caching
+.swp
+.DS_Store
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
