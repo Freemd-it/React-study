@@ -178,7 +178,7 @@ function incrementIfOdd() {
 
 
 
-#### 2-2 Redux-saga
+#### 2-2 [Redux-saga](https://github.com/redux-saga/redux-saga)
 
 위에서 다룬 Redux-thunk는 간단하게 비동기 작업을 처리할 수 있다는 장점이 있지만 단점또한 존재한다.
 
